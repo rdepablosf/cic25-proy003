@@ -7,11 +7,7 @@ public class Calculadora extends Object {
         return total;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
-    }
-
-    public void noHagoNada() {
-        total = 3;
+    public void sumar(double valor) {
+        total = total + valor;
     }
 }

@@ -1,17 +1,27 @@
 package es.cic.curso25;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 public class CalculadoraTest {
     @Test
-    public void testLanzar() {
-        Calculadora c = new Calculadora();
-        Calculadora d = c;
-        c.setTotal(3);
+    public void testSumar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
 
-        double valorActual = c.getTotal();
 
+        // Ejecuto
+        cut.sumar(5.6);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(5.6, valorActual, 0.000001);
+
+
+        cut.sumar(3.4);
+        valorActual = cut.getTotal();
+
+        assertEquals(9, valorActual, 0.000001);
     }
-
-
 }
