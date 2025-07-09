@@ -7,21 +7,11 @@ public class CalculadoraTest {
     public void testLanzar() {
         Calculadora c = new Calculadora();
         Calculadora d = c;
-        c.total = 3;
-        c = new Calculadora();
-        c.total = 4.5;
-    }
+        c.setTotal(3);
 
-        @Test
-    public void testLanzar2() {
-        Calculadora c = new Calculadora();
-        Calculadora d = new Calculadora();
-
-        c.total = 5;
-        d.total = 5;
-
-        c = d;
+        double valorActual = c.getTotal();
 
     }
+
 
 }
