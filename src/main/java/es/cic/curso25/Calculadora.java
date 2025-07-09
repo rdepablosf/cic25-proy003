@@ -1,6 +1,6 @@
 package es.cic.curso25;
 
-public class Calculadora extends Object {
+public class Calculadora {
     private double total;
 
     public double getTotal() {
@@ -9,5 +9,9 @@ public class Calculadora extends Object {
 
     public void sumar(double valor) {
         total = total + valor;
+    }
+
+    public void restar(double a, double b) {
+        total = a - b;
     }
 }
