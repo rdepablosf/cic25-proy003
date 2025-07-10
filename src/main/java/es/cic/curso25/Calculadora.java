@@ -21,7 +21,7 @@ public class Calculadora {
 
     public void dividir(double valor) {
         if (valor == 0) {
-            throw new ArithmeticException("División por cero");
+            throw new ArithmeticException("divisón por cero");
         } else {
             total /= valor;
         }
