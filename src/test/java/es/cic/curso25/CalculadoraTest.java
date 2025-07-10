@@ -7,13 +7,13 @@ import org.junit.jupiter.api.Test;
 public class CalculadoraTest {
     @Test
     public void testSumar() {
-        // Preparo
+        // preparo
         Calculadora cut = new Calculadora();
 
-        // Ejecuto
+        // ejecuto
         cut.sumar(5.6);
 
-        // Verifico
+        // verifico
         double valorActual = cut.getTotal();
         assertEquals(5.6, valorActual, 0.000001);
 
@@ -28,15 +28,34 @@ public class CalculadoraTest {
         Calculadora cut = new Calculadora();
 
         // ejecuto
-        cut.restar(10, 5);
+        cut.restar(5.6);
 
         // verifico
         double valorActual = cut.getTotal();
-        assertEquals(5, valorActual, 0.000001);
+        assertEquals(-5.6, valorActual, 0.000001);
+    }
 
-        cut.restar(10, 5);
-        valorActual = cut.getTotal();
+    @Test
+    public void testMultiplicar() {
+        Calculadora cut = new Calculadora();
+        cut.sumar(4);
 
-        assertEquals(5, valorActual, 0.000001);
+        cut.multiplicar(3);
+        double valorActual = cut.getTotal();
+        assertEquals(12, valorActual, 0.000001);
+    }
+
+    @Test
+    public void testDividir() {
+        // preparo
+        Calculadora cut = new Calculadora();
+        cut.sumar(4);
+
+        // ejecuto
+        cut.dividir(2);
+
+        // verifico
+        double valorActual = cut.getTotal();
+        assertEquals(2, valorActual, 0.000001);
     }
 }

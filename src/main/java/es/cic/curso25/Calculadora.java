@@ -11,7 +11,15 @@ public class Calculadora {
         total = total + valor;
     }
 
-    public void restar(double a, double b) {
-        total = a - b;
+    public void restar(double valor) {
+        total -= valor;
+    }
+
+    public void multiplicar(double valor) {
+        total *= valor;
+    }
+
+    public void dividir(double valor) {
+        total /= valor;
     }
 }
