@@ -1,6 +1,7 @@
 package es.cic.curso25;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
@@ -57,5 +58,15 @@ public class CalculadoraTest {
         // verifico
         double valorActual = cut.getTotal();
         assertEquals(2, valorActual, 0.000001);
+    }
+
+    @Test
+    public void testDividirPorCero() {
+        // preparo
+        Calculadora cut = new Calculadora();
+        cut.sumar(4);
+
+        // ejecuto
+        assertThrows(ArithmeticException.class, () -> cut.dividir(0));
     }
 }

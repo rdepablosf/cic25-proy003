@@ -8,7 +8,7 @@ public class Calculadora {
     }
 
     public void sumar(double valor) {
-        total = total + valor;
+        total += valor;
     }
 
     public void restar(double valor) {
@@ -20,6 +20,10 @@ public class Calculadora {
     }
 
     public void dividir(double valor) {
-        total /= valor;
+        if (valor == 0) {
+            throw new ArithmeticException("División por cero");
+        } else {
+            total /= valor;
+        }
     }
 }
